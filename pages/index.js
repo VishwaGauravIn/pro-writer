@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Header from '../components/Header'
+import ParentBox from '../components/ParentBox'
 
 export default function Home() {
   return (
@@ -9,8 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="">
-          
+      <body className="bg-zinc-900 text-fuchsia-400 m-2 p-2 mon font-semibold">
+          <Header/>
+          <ParentBox/>
       </body>
     </>
   )
