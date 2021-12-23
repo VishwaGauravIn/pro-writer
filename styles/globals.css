@@ -75,6 +75,17 @@
   width: 0.55em;
   height: 0.60em;
 }
+@media (max-width: 640px) {
+  ::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0.65em;
+    height: 0.40em;
+  }
+  #textarea::-webkit-scrollbar{
+    background-color: transparent;
+    width: 0.40em;
+  }
+}
 ::-webkit-scrollbar-track{
   /* background-image: linear-gradient(90deg, rgb(40, 44, 52) 0%, #121212 72%); */
   background-color: transparent;
