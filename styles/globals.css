@@ -83,7 +83,7 @@
   }
   #textarea::-webkit-scrollbar{
     background-color: transparent;
-    width: 0.40em;
+    width: 0.30em;
   }
 }
 ::-webkit-scrollbar-track{
