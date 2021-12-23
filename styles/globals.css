@@ -139,3 +139,83 @@
 ::-webkit-scrollbar-thumb:active {
   background-color: rgb(232, 80, 255);
 } */
+/* Custom Checkbox start */
+input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 26px;
+  background: rgb(39 39 42);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+input:checked + label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  background: rgb(217 70 239);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.fuchsia label:after {
+  background: rgb(217 70 239);
+}
+.cyan label:after {
+  background: rgb(6 182 212);
+}
+.rose label:after {
+  background: rgb(244 63 94);
+}
+.amber label:after {
+  background: rgb(245 158 11);
+}
+.green label:after {
+  background: rgb(34 197 94);
+}
+input:checked + label {
+  background: rgb(217 70 239);
+}
+.fuchsia input:checked + label {
+  background: rgb(217 70 239);
+}
+.cyan input:checked + label {
+  background: rgb(6 182 212);
+}
+.rose input:checked + label {
+  background: rgb(244 63 94);
+}
+.amber input:checked + label {
+  background: rgb(245 158 11);
+}
+.green input:checked + label {
+  background: rgb(34 197 94);
+}
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+
+/* Custom Checkbox end */

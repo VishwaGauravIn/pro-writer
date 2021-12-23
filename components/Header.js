@@ -56,7 +56,7 @@ export default function Header() {
           </svg>
           Pro Writer
         </p>
-        <div className="absolute right-4 flex flex-row">
+        <div className="absolute right-4 flex flex-row pt-2 md:pt-0">
           <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-fuchsia-400" onClick={fuchsia}></div>
           <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-cyan-400" onClick={cyan}></div>
           <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-rose-400" onClick={rose}></div>

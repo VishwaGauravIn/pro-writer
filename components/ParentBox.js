@@ -12,14 +12,17 @@ export default function ParentBox() {
   const [wordCount, setWordCount] = useState(0);
   const [lineCount, setLineCount] = useState(0);
   const [memory, setMemory] = useState(0);
-  const [textSize, setTextSize] = useState(4)
+  const [textSize, setTextSize] = useState(4);
   function onChange() {
     setLetterCount(document.getElementById("textarea").value.length);
     localStorage.setItem(
       "proWriter-lastSave",
       document.getElementById("textarea").value
     );
-    if (document.getElementById("textarea").value.length > 100 && document.getElementById("textarea").value != " ") {
+    if (
+      document.getElementById("textarea").value.length > 100 &&
+      document.getElementById("textarea").value != " "
+    ) {
       setWordCount(
         document.getElementById("textarea").value.match(/(\w+)/g).length
       );
@@ -39,39 +42,40 @@ export default function ParentBox() {
       setLineCount(0);
       setMemory(0);
     }
-}
-function decreaseTextSize(){
-    if(textSize > 1){
-        setTextSize(textSize-1)
+  }
+  function decreaseTextSize() {
+    if (textSize > 1) {
+      setTextSize(textSize - 1);
     }
-}
-function increaseTextSize(){
-    if(textSize < 5){
-        setTextSize(textSize+1)
+  }
+  function increaseTextSize() {
+    if (textSize < 5) {
+      setTextSize(textSize + 1);
     }
-}
-useEffect(()=>{
-    if(textSize === 1){
-        document.getElementById('textarea').style.fontSize = '0.875rem' 
-        document.getElementById('textarea').style.lineHeight = '1.25rem'
+  }
+  useEffect(() => {
+    if (textSize === 1) {
+      document.getElementById("textarea").style.fontSize = "0.875rem";
+      document.getElementById("textarea").style.lineHeight = "1.25rem";
     }
-    if(textSize === 2){
-        document.getElementById('textarea').style.fontSize = '1rem' 
-        document.getElementById('textarea').style.lineHeight = '1.5rem'
+    if (textSize === 2) {
+      document.getElementById("textarea").style.fontSize = "1rem";
+      document.getElementById("textarea").style.lineHeight = "1.5rem";
     }
-    if(textSize === 3){
-        document.getElementById('textarea').style.fontSize = '1.125rem' 
-        document.getElementById('textarea').style.lineHeight = '1.75rem'
+    if (textSize === 3) {
+      document.getElementById("textarea").style.fontSize = "1.125rem";
+      document.getElementById("textarea").style.lineHeight = "1.75rem";
     }
-    if(textSize === 4){
-        document.getElementById('textarea').style.fontSize = '1.25rem' 
-        document.getElementById('textarea').style.lineHeight = '1.75rem' 
+    if (textSize === 4) {
+      document.getElementById("textarea").style.fontSize = "1.25rem";
+      document.getElementById("textarea").style.lineHeight = "1.75rem";
     }
-    if(textSize === 5){
-        document.getElementById('textarea').style.fontSize = '1.5rem' 
-        document.getElementById('textarea').style.lineHeight = '2rem'
+    if (textSize === 5) {
+      document.getElementById("textarea").style.fontSize = "1.5rem";
+      document.getElementById("textarea").style.lineHeight = "2rem";
     }
-},[textSize])
+    }, [textSize]);
+   
   return (
     <div className="flex flex-col pb-14 md:pb-0 md:flex-row">
       <div className="my-2 py-4 self-start">
@@ -128,7 +132,10 @@ useEffect(()=>{
           Text Size
         </p>
         <div className="flex flex-row mt-2">
-          <div className="mx-1 cursor-pointer hover:scale-105 active:scale-100 transform transition-all ease-in-out duration-100" onClick={decreaseTextSize}>
+          <div
+            className="mx-1 cursor-pointer hover:scale-105 active:scale-100 transform transition-all ease-in-out duration-100"
+            onClick={decreaseTextSize}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8"
@@ -144,7 +151,10 @@ useEffect(()=>{
               />
             </svg>
           </div>
-          <div className="mx-1 cursor-pointer hover:scale-105 active:scale-100 transform transition-all ease-in-out duration-100" onClick={increaseTextSize}>
+          <div
+            className="mx-1 cursor-pointer hover:scale-105 active:scale-100 transform transition-all ease-in-out duration-100"
+            onClick={increaseTextSize}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-8 w-8"
@@ -161,6 +171,10 @@ useEffect(()=>{
             </svg>
           </div>
         </div>
+        {/* Styled checkbox ~ customised */}
+        {/* <input type="checkbox" id="switch" className="mt-2" />
+        <label for="switch" onClick={() => setAutoCorrect(!autoCorrect)}>
+        </label> */}
       </div>
     </div>
   );
