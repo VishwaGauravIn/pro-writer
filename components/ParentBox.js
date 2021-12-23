@@ -19,7 +19,7 @@ export default function ParentBox() {
       "proWriter-lastSave",
       document.getElementById("textarea").value
     );
-    if (document.getElementById("textarea").value.length != 0) {
+    if (document.getElementById("textarea").value.length > 100 && document.getElementById("textarea").value != " ") {
       setWordCount(
         document.getElementById("textarea").value.match(/(\w+)/g).length
       );
@@ -73,7 +73,7 @@ useEffect(()=>{
     }
 },[textSize])
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col pb-14 md:pb-0 md:flex-row">
       <div className="my-2 py-4 self-start">
         <textarea
           name=""
@@ -81,7 +81,7 @@ useEffect(()=>{
           cols="30"
           rows="10"
           placeholder="Enter Your Text here..."
-          className="bg-transparent outline-none text-xl placeholder-fuchsia-400 placeholder-opacity-60 selection:bg-fuchsia-500 selection:text-fuchsia-50"
+          className="bg-transparent outline-none text-xl pr-2 placeholder-fuchsia-400 placeholder-opacity-60 selection:bg-fuchsia-500 selection:text-fuchsia-50"
           onChange={onChange}
         ></textarea>
       </div>

@@ -41,10 +41,10 @@ export default function ToolBox() {
     element.click();
   };
   return (
-    <div className="flex fixed flex-row bottom-0 h-16 w-full justify-center items-center">
+    <div className="flex fixed flex-col md:flex-row -ml-6 flex-wrap bottom-0 h-16 w-full max-w-full overflow-x-auto justify-start md:justify-center items-center bg-zinc-900">
       {/* Magic Spell */}
       <div
-        className="flex flex-col justify-center items-center w-28 cursor-pointer"
+        className="inline-flex flex-col justify-center items-center w-28 cursor-pointer"
         // onClick={lowerCase}
       >
         <svg
@@ -65,7 +65,7 @@ export default function ToolBox() {
       </div>
       {/* Lowercase */}
       <div
-        className="flex flex-col justify-center items-center w-28 cursor-pointer"
+        className="inline-flex flex-col justify-center items-center w-28 cursor-pointer"
         onClick={lowerCase}
       >
         <svg
@@ -86,7 +86,7 @@ export default function ToolBox() {
       </div>
       {/* Uppercase */}
       <div
-        className="flex flex-col justify-center items-center ml-2 w-28 cursor-pointer"
+        className="inline-flex flex-col justify-center items-center ml-2 w-28 cursor-pointer"
         onClick={upperCase}
       >
         <svg
@@ -107,7 +107,7 @@ export default function ToolBox() {
       </div>
       {/* Capitalise */}
       <div
-        className="flex flex-col justify-center items-center ml-2 w-28 cursor-pointer"
+        className="inline-flex flex-col justify-center items-center ml-2 w-28 cursor-pointer"
         onClick={capitalise}
       >
         <svg
@@ -122,7 +122,7 @@ export default function ToolBox() {
       </div>
       {/* Save TXT */}
       <div
-        className="flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"
+        className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"
         onClick={TextFile}
       >
         <svg

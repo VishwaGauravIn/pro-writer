@@ -8,6 +8,11 @@
   width: 70vw;
   resize: none;
 }
+@media (max-width: 768px) {
+  #textarea{
+    width: 90vw;
+  }
+}
 .text-stats{
   max-height:  70vh;
 }
