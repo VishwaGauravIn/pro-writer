@@ -1,26 +1,77 @@
 import React, { useEffect, useState } from "react";
 
 export default function ParentBox() {
-    useEffect(() => {
-        if(localStorage.getItem('proWriter-lastSave')){
-            document.getElementById('textarea').value = localStorage.getItem('proWriter-lastSave');
-            onChange()
-        }
-    }, [])
-    const[letterCount, setLetterCount] = useState(0)
-    const[wordCount, setWordCount] = useState(0)
-    const[lineCount, setLineCount] = useState(0)
-    function onChange(){
-        setLetterCount(document.getElementById('textarea').value.length)
-        localStorage.setItem('proWriter-lastSave', document.getElementById('textarea').value)
-        if(document.getElementById('textarea').value.length != 0){
-            setWordCount(document.getElementById('textarea').value.match(/(\w+)/g).length )
-            setLineCount(document.getElementById('textarea').value.split(/\r\n|\r|\n/).length )
-        }else{
-            setWordCount(0)
-            setLineCount(0)
-        }
+  useEffect(() => {
+    if (localStorage.getItem("proWriter-lastSave")) {
+      document.getElementById("textarea").value =
+        localStorage.getItem("proWriter-lastSave");
+      onChange();
     }
+  }, []);
+  const [letterCount, setLetterCount] = useState(0);
+  const [wordCount, setWordCount] = useState(0);
+  const [lineCount, setLineCount] = useState(0);
+  const [memory, setMemory] = useState(0);
+  const [textSize, setTextSize] = useState(4)
+  function onChange() {
+    setLetterCount(document.getElementById("textarea").value.length);
+    localStorage.setItem(
+      "proWriter-lastSave",
+      document.getElementById("textarea").value
+    );
+    if (document.getElementById("textarea").value.length != 0) {
+      setWordCount(
+        document.getElementById("textarea").value.match(/(\w+)/g).length
+      );
+      setLineCount(
+        document.getElementById("textarea").value.split(/\r\n|\r|\n/).length
+      );
+
+      setMemory(
+        Math.round(
+          (document.getElementById("textarea").value.length * 0.001 +
+            Number.EPSILON) *
+            100
+        ) / 100
+      );
+    } else {
+      setWordCount(0);
+      setLineCount(0);
+      setMemory(0);
+    }
+}
+function decreaseTextSize(){
+    if(textSize > 1){
+        setTextSize(textSize-1)
+    }
+}
+function increaseTextSize(){
+    if(textSize < 5){
+        setTextSize(textSize+1)
+    }
+}
+useEffect(()=>{
+    if(textSize === 1){
+        document.getElementById('textarea').style.fontSize = '0.875rem' 
+        document.getElementById('textarea').style.lineHeight = '1.25rem'
+    }
+    if(textSize === 2){
+        document.getElementById('textarea').style.fontSize = '1rem' 
+        document.getElementById('textarea').style.lineHeight = '1.5rem'
+    }
+    if(textSize === 3){
+        document.getElementById('textarea').style.fontSize = '1.125rem' 
+        document.getElementById('textarea').style.lineHeight = '1.75rem'
+    }
+    if(textSize === 4){
+        document.getElementById('textarea').style.fontSize = '1.25rem' 
+        document.getElementById('textarea').style.lineHeight = '1.75rem' 
+    }
+    if(textSize === 5){
+        document.getElementById('textarea').style.fontSize = '1.5rem' 
+        document.getElementById('textarea').style.lineHeight = '2rem'
+    }
+},[textSize])
   return (
     <div className="flex flex-col md:flex-row">
       <div className="my-2 py-4 self-start">
@@ -54,10 +105,61 @@ export default function ParentBox() {
           Statistics
         </p>
         <div className="flex flex-col">
-            <p className="mt-4">{letterCount} characters</p>
-            <p className="mt-4">{wordCount} words</p>
-            <p className="mt-4">{lineCount} lines</p>
-            <p className="mt-4"></p>
+          <p className="mt-4">{letterCount} characters</p>
+          <p className="mt-4">{wordCount} words</p>
+          <p className="mt-4">{lineCount} lines</p>
+          <p className="mt-4">{memory} Kb</p>
+        </div>
+        <p className="flex-row flex text-3xl font-normal mt-9">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10 mr-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.2}
+              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+            />
+          </svg>
+          Text Size
+        </p>
+        <div className="flex flex-row mt-2">
+          <div className="mx-1 cursor-pointer hover:scale-105 active:scale-100 transform transition-all ease-in-out duration-100" onClick={decreaseTextSize}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <div className="mx-1 cursor-pointer hover:scale-105 active:scale-100 transform transition-all ease-in-out duration-100" onClick={increaseTextSize}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="bg-zinc-900 text-fuchsia-400 m-2 p-2 mon font-semibold">
+      <body id="mainbody" className="bg-zinc-900 text-fuchsia-400 m-2 p-2 mon font-semibold">
           <Header/>
           <ParentBox/>
       </body>
