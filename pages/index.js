@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import ParentBox from '../components/ParentBox'
+import ToolBox from '../components/ToolBox'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <body id="mainbody" className="bg-zinc-900 text-fuchsia-400 m-2 p-2 mon font-semibold">
           <Header/>
           <ParentBox/>
+          <ToolBox/>
       </body>
     </>
   )
