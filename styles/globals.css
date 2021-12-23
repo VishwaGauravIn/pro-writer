@@ -6,6 +6,7 @@
 #textarea{
   height: 70vh;
   width: 70vw;
+  resize: none;
 }
 .text-stats{
   max-height:  70vh;
@@ -55,3 +56,65 @@
 .green #textarea::selection{
   background-color: rgb(34 197 94);
 }
+/* Free to Use , githhub.com/VishwaGauravIn */
+
+
+/* Basic */
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 0.65em;
+}
+
+::-webkit-scrollbar-track{
+  /* background-image: linear-gradient(90deg, rgb(40, 44, 52) 0%, #121212 72%); */
+  background-color: transparent;
+}
+
+/* default color, border color to match body bg and give some space*/
+::-webkit-scrollbar-thumb{
+  transform-style: preserve-3d;
+  background-color: rgb(217 70 239);
+  border-radius: 50px;
+  border-color: rgb(24 24 27);
+  border-style: solid;
+}
+.fuchsia ::-webkit-scrollbar-thumb{
+  transform-style: preserve-3d;
+  background-color: rgb(217 70 239);
+  border-radius: 50px;
+  border-color: rgb(24 24 27);
+  border-style: solid;
+}
+.cyan ::-webkit-scrollbar-thumb{
+  transform-style: preserve-3d;
+  background-color: rgb(6 182 212);
+  border-radius: 50px;
+  border-color: rgb(24 24 27);
+  border-style: solid;
+}
+.rose ::-webkit-scrollbar-thumb{
+  transform-style: preserve-3d;
+  background-color: rgb(244 63 94);
+  border-radius: 50px;
+  border-color: rgb(24 24 27);
+  border-style: solid;
+}
+.amber ::-webkit-scrollbar-thumb{
+  transform-style: preserve-3d;
+  background-color: rgb(245 158 11);
+  border-radius: 50px;
+  border-color: rgb(24 24 27);
+  border-style: solid;
+}
+.green ::-webkit-scrollbar-thumb{
+  transform-style: preserve-3d;
+  background-color: rgb(34 197 94);
+  border-radius: 50px;
+  border-color: rgb(24 24 27);
+  border-style: solid;
+}
+
+/* basically onClick
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(232, 80, 255);
+} */
