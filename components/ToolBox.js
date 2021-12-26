@@ -44,7 +44,7 @@ export default function ToolBox() {
   };
   return (
     <>
-      <div className="flex fixed flex-col md:flex-row -ml-4 flex-wrap bottom-0 h-16 w-full max-w-full overflow-x-auto justify-start md:justify-center items-center bg-zinc-900 overflow-y-hidden">
+      <div className="flex fixed flex-col md:flex-row -ml-4 px-2 flex-wrap bottom-0 h-16 w-full max-w-full overflow-x-auto justify-start md:justify-center items-center bg-zinc-900 overflow-y-hidden">
         {/* Magic Spell */}
         <div
           className="inline-flex flex-col justify-center items-center w-28 cursor-pointer"
@@ -142,9 +142,9 @@ export default function ToolBox() {
               d="M17 16v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2h2m3-4H9a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-1m-1 4l-3 3m0 0l-3-3m3 3V3"
             />
           </svg>
-          save as .txt
+          Save as .txt
         </div>
-        {/* Save TXT */}
+        {/* Temlpate */}
         <div
           className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"
           onClick={() => setIsTemplateVisible(!isTemplateVisible)}

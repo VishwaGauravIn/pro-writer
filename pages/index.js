@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
 
-      <body id="mainbody" className="bg-zinc-900 text-fuchsia-400 m-2 md:p-2 mon font-semibold">
+      <body id="mainbody" className="bg-zinc-900 text-fuchsia-400 m-2 md:p-2 mon font-semibold md:overflow-y-hidden">
           <Header/>
           <ParentBox/>
           <ToolBox/>
