@@ -49,6 +49,7 @@ export default function ToolBox() {
         <div
           className="inline-flex flex-col justify-center items-center w-28 cursor-pointer"
           onClick={magicSpell}
+          title="Add relevant characters to your text to make it even more longer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

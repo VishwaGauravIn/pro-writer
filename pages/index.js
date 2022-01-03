@@ -22,7 +22,10 @@ export default function Home() {
           property="og:description"
           content="Minimal yet Pro Writer for your all need!"
         />
-        <meta property="og:image" content="https://metaseo.itsvg.in/404.svg" />
+        <meta
+          property="og:image"
+          content="https://prowriter.itsvg.in/webimage.png"
+        />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://prowriter.itsvg.in" />
         <meta property="twitter:title" content="Pro Writer 🚀" />
@@ -32,8 +35,9 @@ export default function Home() {
         />
         <meta
           property="twitter:image"
-          content="https://metaseo.itsvg.in/404.svg"
+          content="https://prowriter.itsvg.in/webimage.png"
         />
+
         <link rel="icon" href="/logo.png" />
         {/* Google Analytics */}
         <script

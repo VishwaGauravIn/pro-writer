@@ -13,6 +13,22 @@ export default function ParentBox() {
   const [lineCount, setLineCount] = useState(0);
   const [memory, setMemory] = useState(0);
   const [textSize, setTextSize] = useState(4);
+  const PLACEHOLDER = `Enter Your Text here...
+  
+Welcome to Pro Writer 🚀
+
+You can see letter count, word count, line count, and text memory size in Statistics section.
+You can also set text size according to your requirement and change theme of your choice.
+
+What is Magic Spell? [BETA]
+Need 1000 words article and stuck on 960? use Magic Spell and it will add relevant characters to your article to make it even more longer.
+Not just article, try this with anything. Story, Letter, Cover, and more.
+
+Wrote something important but forgot to save? Don't worry, we got your back. Your text is saved automatically in your device.
+
+It works on all devices, Sounds good? Well there is lot more to come. 
+This project is Open Source so if you want any new feature, you can add this yourself by contributing to our GitHub repository or request a feature
+  `;
   function onChange() {
     setLetterCount(document.getElementById("textarea").value.length);
     localStorage.setItem(
@@ -74,8 +90,8 @@ export default function ParentBox() {
       document.getElementById("textarea").style.fontSize = "1.5rem";
       document.getElementById("textarea").style.lineHeight = "2rem";
     }
-    }, [textSize]);
-   
+  }, [textSize]);
+
   return (
     <div className="flex flex-col pb-14 md:pb-0 md:flex-row">
       <div className="my-2 py-4 self-start">
@@ -84,7 +100,7 @@ export default function ParentBox() {
           id="textarea"
           cols="30"
           rows="10"
-          placeholder="Enter Your Text here..."
+          placeholder={PLACEHOLDER}
           className="bg-transparent outline-none text-xl pr-2 placeholder-fuchsia-400 placeholder-opacity-60 selection:bg-fuchsia-500 selection:text-fuchsia-50"
           onChange={onChange}
         ></textarea>
