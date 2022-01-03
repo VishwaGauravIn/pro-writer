@@ -1,5 +1,5 @@
 <div align="center">
- <h1> <img src="https://prowriter.itsvg.in/logo.png" width="80px"><br/>Form Prototype</h1>
+ <h1> <img src="https://prowriter.itsvg.in/logo.png" width="80px"><br/>Pro Writer</h1>
  <img src="https://img.shields.io/badge/Release-v.1.0.0-brightgreen?style=plastic"/>
  <img src="https://img.shields.io/badge/Code-Open%20Source-brightgreen?style=plastic"/>
  <img src="https://img.shields.io/npm/v/npm?style=plastic">
