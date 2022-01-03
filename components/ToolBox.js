@@ -173,7 +173,7 @@ export default function ToolBox() {
           className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"
           href="https://github.com/VishwaGauravIn/pro-writer"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@ export default function ToolBox() {
           className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"
           href="https://itsvg.in"
           target="_blank"
-          rel="noopener"
+          rel="noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
