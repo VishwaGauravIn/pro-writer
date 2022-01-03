@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Header() {
+  useEffect(()=>{
+      if(localStorage.getItem('favTheme') === 'fuchsia'){fuchsia()}
+      if(localStorage.getItem('favTheme') === 'cyan'){cyan()}
+      if(localStorage.getItem('favTheme') === 'rose'){rose()}
+      if(localStorage.getItem('favTheme') === 'amber'){amber()}
+      if(localStorage.getItem('favTheme') === 'green'){green()}
+  },[])
     function fuchsia(){
         document.documentElement.classList.add('fuchsia')
         document.documentElement.classList.remove('cyan')
         document.documentElement.classList.remove('rose')
         document.documentElement.classList.remove('amber')
         document.documentElement.classList.remove('green')
+        localStorage.setItem('favTheme', 'fuchsia')
     }
     function cyan(){
         document.documentElement.classList.add('cyan')
@@ -14,27 +22,31 @@ export default function Header() {
         document.documentElement.classList.remove('rose')
         document.documentElement.classList.remove('amber')
         document.documentElement.classList.remove('green')
+        localStorage.setItem('favTheme', 'cyan')
     }
     function rose(){
         document.documentElement.classList.add('rose')
-        document.documentElement.classList.remove('fuchsia')
         document.documentElement.classList.remove('cyan')
+        document.documentElement.classList.remove('fuchsia')
         document.documentElement.classList.remove('amber')
         document.documentElement.classList.remove('green')
+        localStorage.setItem('favTheme', 'rose')
     }
     function amber(){
         document.documentElement.classList.add('amber')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('rose')
         document.documentElement.classList.remove('cyan')
+        document.documentElement.classList.remove('fuchsia')
+        document.documentElement.classList.remove('fuchsia')
         document.documentElement.classList.remove('green')
+        localStorage.setItem('favTheme', 'amber')
     }
     function green(){
         document.documentElement.classList.add('green')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('rose')
-        document.documentElement.classList.remove('amber')
         document.documentElement.classList.remove('cyan')
+        document.documentElement.classList.remove('fuchsia')
+        document.documentElement.classList.remove('amber')
+        document.documentElement.classList.remove('fuchsia')
+        localStorage.setItem('favTheme', 'green')
     }
   return (
     <div>
