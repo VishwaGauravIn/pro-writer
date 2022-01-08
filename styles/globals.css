@@ -7,6 +7,10 @@
   height: 70vh;
   width: 70vw;
   resize: none;
+  
+}
+#textarea::placeholder{
+  opacity: 0.5;
 }
 @media (max-width: 768px) {
   #textarea{

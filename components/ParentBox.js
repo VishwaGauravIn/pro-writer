@@ -101,7 +101,7 @@ This project is Open Source so if you want any new feature, you can add this you
           cols="30"
           rows="10"
           placeholder={PLACEHOLDER}
-          className="bg-transparent outline-none text-xl pr-2 placeholder-fuchsia-400 placeholder-opacity-60 selection:bg-fuchsia-500 selection:text-fuchsia-50"
+          className="bg-transparent outline-none text-xl pr-2 placeholder-fuchsia-800 selection:bg-fuchsia-500 selection:text-fuchsia-50"
           onChange={onChange}
         ></textarea>
       </div>
