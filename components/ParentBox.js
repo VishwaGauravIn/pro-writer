@@ -36,7 +36,7 @@ This project is Open Source so if you want any new feature, you can add this you
       document.getElementById("textarea").value
     );
     if (
-      document.getElementById("textarea").value.length > 100 &&
+      document.getElementById("textarea").value.length > 0 &&
       document.getElementById("textarea").value != " "
     ) {
       setWordCount(
