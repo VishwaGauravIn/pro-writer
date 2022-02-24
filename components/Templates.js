@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Templates({ onClose }) {
+export default function Templates({ onClose, setText }) {
   function formalLetter() {
-    document.getElementById("textarea").value = `
+    setText(`
 [Date]
 
 From: [Sender Name]
@@ -19,11 +19,10 @@ Sincerely,
 [Your Name]
 [Title]
 
-        `;
+        `);
   }
-
   function informalLetter() {
-    document.getElementById("textarea").value = `
+    setText(`
 [Street]
 
 [Area]
@@ -39,10 +38,10 @@ Dear [Name],
 
 Lots of Love
 [Your Name]
-      `;
+      `);
   }
   function referenceLetter() {
-    document.getElementById("textarea").value = `
+    setText(`
 [Address of the person who is reffering]
 
 [Date]
@@ -62,10 +61,11 @@ Sincerely,
 [Name] (signature hard copy letter)
 
 [Name]
-      `;
+      `);
   }
+
   function coverLetter() {
-    document.getElementById("textarea").value = `
+    setText(`
 [Today's Date]
 
 [Hiring Manager's Name]
@@ -82,7 +82,7 @@ Dear [Mr./Ms./Mrs.] [Hiring Manager's Name],
 
 Sincerely,
 [Your Name]
-      `;
+      `);
   }
   return (
     <div className="bg-zinc-900 p-2 fixed -mt-12 md:-mt-28 sm:rounded-t-md overflow-x-scroll overflow-y-hidden flex flex-col flex-wrap items-start max-w-[100vw] h-12 md:h-10">

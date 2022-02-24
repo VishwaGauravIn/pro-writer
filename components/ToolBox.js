@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import Templates from "./Templates";
 
-export default function ToolBox() {
+export default function ToolBox({ text, setText }) {
   const [isTemplateVisible, setIsTemplateVisible] = useState(false);
   function lowerCase() {
-    document.getElementById("textarea").value = document
-      .getElementById("textarea")
-      .value.toLowerCase();
+    setText(text.toLowerCase());
   }
   function upperCase() {
-    document.getElementById("textarea").value = document
-      .getElementById("textarea")
-      .value.toUpperCase();
+    setText(text.toUpperCase());
   }
   function capitalise() {
-    let s = document.getElementById("textarea").value;
+    let s = text;
     s = s.toLowerCase();
     s = s.charAt(0).toUpperCase() + s.slice(1);
     // Advanced Word Count ~ VishwaGauravIn
@@ -30,11 +26,11 @@ export default function ToolBox() {
         }
       }
     }
-    document.getElementById("textarea").value = s;
+    setText(s);
   }
   const TextFile = () => {
     const element = document.createElement("a");
-    const file = new Blob([document.getElementById("textarea").value], {
+    const file = new Blob([text], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
@@ -167,7 +163,10 @@ export default function ToolBox() {
           Templates
         </div>
         {isTemplateVisible && (
-          <Templates onClose={() => setIsTemplateVisible(false)} />
+          <Templates
+            setText={setText}
+            onClose={() => setIsTemplateVisible(false)}
+          />
         )}
         {/* Contribute */}
         <a

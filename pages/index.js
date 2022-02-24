@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import ParentBox from "../components/ParentBox";
-import ToolBox from "../components/ToolBox";
 
 export default function Home() {
   return (
@@ -63,7 +62,6 @@ export default function Home() {
       >
         <Header />
         <ParentBox />
-        <ToolBox />
       </body>
     </>
   );
