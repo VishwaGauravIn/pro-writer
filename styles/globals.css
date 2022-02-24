@@ -40,9 +40,6 @@
 .fuchsia #textarea::selection{
   background-color: var(--fuchsiaLight);
 }
-.fuchsia #containerBorder{
-  border-color: var(--fuchsia);
-}
 .cyan #mainbody{
   color: var(--cyan);
 }
@@ -51,9 +48,6 @@
 }
 .cyan #textarea::selection{
   background-color: var(--cyanLight);
-}
-.cyan #containerBorder{
-  border-color: var(--cyan);
 }
 .rose #mainbody{
   color: var(--rose);
@@ -64,9 +58,6 @@
 .rose #textarea::selection{
   background-color: var(--roseLight);
 }
-.rose #containerBorder{
-  border-color: var(--rose);
-}
 .amber #mainbody{
   color: var(--amber);
 }
@@ -76,9 +67,6 @@
 .amber #textarea::selection{
   background-color: var(--amberLight);
 }
-.amber #containerBorder{
-  border-color: var(--amber);
-}
 .green #mainbody{
   color: var(--green);
 }
@@ -87,9 +75,6 @@
 }
 .green #textarea::selection{
   background-color: var(--greenLight);
-}
-.green #containerBorder{
-  border-color: var(--green);
 }
 /* Free to Use , githhub.com/VishwaGauravIn */
 
