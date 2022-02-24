@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+:root{
+  --fuchsia: rgb(232 121 249);
+  --cyan: rgb(34 211 238);
+  --rose:rgb(251 113 133);
+  --amber: rgb(251 191 36);
+  --green: rgb(74 222 128);
+  --fuchsiaLight: rgb(217 70 239);
+  --cyanLight: rgb(6 182 212);
+  --roseLight:rgb(244 63 94);
+  --amberLight: rgb(245 158 11);
+  --greenLight: rgb(34 197 94);
+}
 .mon{
   font-family: 'Montserrat', sans-serif;
 }
@@ -21,49 +32,64 @@
   max-height:  70vh;
 }
 .fuchsia #mainbody{
-  color: rgb(232 121 249);
+  color: var(--fuchsia);
 }
 .fuchsia #textarea::placeholder{
-  color: rgb(232 121 249);
+  color: var(--fuchsia);
 }
 .fuchsia #textarea::selection{
-  background-color: rgb(217 70 239);
+  background-color: var(--fuchsiaLight);
+}
+.fuchsia #containerBorder{
+  border-color: var(--fuchsia);
 }
 .cyan #mainbody{
-  color: rgb(34 211 238);
+  color: var(--cyan);
 }
 .cyan #textarea::placeholder{
-  color: rgb(34 211 238);
+  color: var(--cyan);
 }
 .cyan #textarea::selection{
-  background-color: rgb(6 182 212);
+  background-color: var(--cyanLight);
+}
+.cyan #containerBorder{
+  border-color: var(--cyan);
 }
 .rose #mainbody{
-  color: rgb(251 113 133);
+  color: var(--rose);
 }
 .rose #textarea::placeholder{
-  color: rgb(251 113 133);
+  color: var(--rose);
 }
 .rose #textarea::selection{
-  background-color: rgb(244 63 94);
+  background-color: var(--roseLight);
+}
+.rose #containerBorder{
+  border-color: var(--rose);
 }
 .amber #mainbody{
-  color: rgb(251 191 36);
+  color: var(--amber);
 }
 .amber #textarea::placeholder{
-  color: rgb(251 191 36);
+  color: var(--amber);
 }
 .amber #textarea::selection{
-  background-color: rgb(245 158 11);
+  background-color: var(--amberLight);
+}
+.amber #containerBorder{
+  border-color: var(--amber);
 }
 .green #mainbody{
-  color: rgb(74 222 128);
+  color: var(--green);
 }
 .green #textarea::placeholder{
-  color: rgb(74 222 128);
+  color: var(--green);
 }
 .green #textarea::selection{
-  background-color: rgb(34 197 94);
+  background-color: var(--greenLight);
+}
+.green #containerBorder{
+  border-color: var(--green);
 }
 /* Free to Use , githhub.com/VishwaGauravIn */
 
@@ -98,42 +124,42 @@
 /* default color, border color to match body bg and give some space*/
 ::-webkit-scrollbar-thumb{
   transform-style: preserve-3d;
-  background-color: rgb(217 70 239);
+  background-color: var(--fuchsiaLight);
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;
 }
 .fuchsia ::-webkit-scrollbar-thumb{
   transform-style: preserve-3d;
-  background-color: rgb(217 70 239);
+  background-color: var(--fuchsiaLight);
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;
 }
 .cyan ::-webkit-scrollbar-thumb{
   transform-style: preserve-3d;
-  background-color: rgb(6 182 212);
+  background-color: var(--cyanLight);
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;
 }
 .rose ::-webkit-scrollbar-thumb{
   transform-style: preserve-3d;
-  background-color: rgb(244 63 94);
+  background-color: var(--roseLight);
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;
 }
 .amber ::-webkit-scrollbar-thumb{
   transform-style: preserve-3d;
-  background-color: rgb(245 158 11);
+  background-color: var(--amberLight);
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;
 }
 .green ::-webkit-scrollbar-thumb{
   transform-style: preserve-3d;
-  background-color: rgb(34 197 94);
+  background-color: var(--greenLight);
   border-radius: 50px;
   border-color: rgb(24 24 27);
   border-style: solid;
@@ -179,42 +205,42 @@ label:after {
   left: 5px;
   width: 16px;
   height: 16px;
-  background: rgb(217 70 239);
+  background: var(--fuchsiaLight);
   border-radius: 90px;
   transition: 0.3s;
 }
 .fuchsia label:after {
-  background: rgb(217 70 239);
+  background: var(--fuchsiaLight);
 }
 .cyan label:after {
-  background: rgb(6 182 212);
+  background: var(--cyanLight);
 }
 .rose label:after {
-  background: rgb(244 63 94);
+  background: var(--roseLight);
 }
 .amber label:after {
-  background: rgb(245 158 11);
+  background: var(--amberLight);
 }
 .green label:after {
-  background: rgb(34 197 94);
+  background: var(--greenLight);
 }
 input:checked + label {
-  background: rgb(217 70 239);
+  background: var(--fuchsiaLight);
 }
 .fuchsia input:checked + label {
-  background: rgb(217 70 239);
+  background: var(--fuchsiaLight);
 }
 .cyan input:checked + label {
-  background: rgb(6 182 212);
+  background: var(--cyanLight);
 }
 .rose input:checked + label {
-  background: rgb(244 63 94);
+  background: var(--roseLight);
 }
 .amber input:checked + label {
-  background: rgb(245 158 11);
+  background: var(--amberLight);
 }
 .green input:checked + label {
-  background: rgb(34 197 94);
+  background: var(--greenLight);
 }
 input:checked + label:after {
   left: calc(100% - 5px);
