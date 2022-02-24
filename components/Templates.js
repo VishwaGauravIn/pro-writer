@@ -85,7 +85,7 @@ Sincerely,
       `;
   }
   return ( 
-    <div className="bg-zinc-900 w-40 h-max p-2 mb-44 fixed text-center flex flex-col border rounded-lg" id="containerBorder">
+    <div className="bg-zinc-900 w-40 h-max p-2 mb-44 fixed text-center rounded-t-lg flex flex-col">
       <p className="mb-1" onClick={() => formalLetter() & onClose()}>
         Formal Letter
       </p>
