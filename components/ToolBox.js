@@ -44,7 +44,7 @@ export default function ToolBox() {
   };
   return (
     <>
-      <div className="flex fixed flex-col md:flex-row -ml-4 px-2 flex-wrap bottom-0 h-16 w-full max-w-full overflow-x-auto justify-start md:justify-center items-center bg-zinc-900 overflow-y-hidden">
+      <div className="flex fixed flex-col md:flex-row -ml-4 px-2 flex-wrap bottom-0 h-16 w-full max-w-full overflow-x-auto justify-start md:justify-center items-center bg-zinc-900 overflow-y-hidden select-none">
         {/* Magic Spell */}
         <div
           className="inline-flex flex-col justify-center items-center w-28 cursor-pointer"
@@ -147,7 +147,7 @@ export default function ToolBox() {
         </div>
         {/* Temlpate */}
         <div
-          className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"
+          className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer h-max"
           onClick={() => setIsTemplateVisible(!isTemplateVisible)}
         >
           <svg
@@ -165,10 +165,10 @@ export default function ToolBox() {
             />
           </svg>
           Templates
-          {isTemplateVisible && (
-            <Templates onClose={() => setIsTemplateVisible(false)} />
-          )}
         </div>
+        {isTemplateVisible && (
+          <Templates onClose={() => setIsTemplateVisible(false)} />
+        )}
         {/* Contribute */}
         <a
           className="inline-flex flex-col justify-center items-center ml-2 w-24 cursor-pointer"

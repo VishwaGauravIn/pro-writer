@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Templates({onClose}) {
+export default function Templates({ onClose }) {
   function formalLetter() {
     document.getElementById("textarea").value = `
 [Date]
@@ -85,15 +85,21 @@ Sincerely,
       `;
   }
   return (
-    <div className="bg-zinc-900 w-40 h-max p-2 mb-44 fixed text-center rounded-t-lg flex flex-col">
-      <p className="mb-1" onClick={() => formalLetter() & onClose()}>
-        Formal Letter
-      </p>
-      <p className="mb-1" onClick={() => informalLetter() & onClose()}>
-        Informal Letter
-      </p>
-      <p className="mb-1" onClick={() => referenceLetter() & onClose()}>Reference Letter</p>
-      <p className="mb-1" onClick={() => coverLetter() & onClose()}>Cover Letter</p>
+    <div className="bg-zinc-900 p-2 fixed -mt-12 md:-mt-28 sm:rounded-t-md overflow-x-scroll overflow-y-hidden flex flex-col flex-wrap items-start max-w-[100vw] h-12 md:h-10">
+      <div className="w-max h-max flex flex-row flex-wrap space-x-4">
+        <p className="mb-1 cursor-pointer" onClick={() => formalLetter() & onClose()}>
+          Formal Letter
+        </p>
+        <p className="mb-1 cursor-pointer" onClick={() => informalLetter() & onClose()}>
+          Informal Letter
+        </p>
+        <p className="mb-1 cursor-pointer" onClick={() => referenceLetter() & onClose()}>
+          Reference Letter
+        </p>
+        <p className="mb-1 cursor-pointer" onClick={() => coverLetter() & onClose()}>
+          Cover Letter
+        </p>
+      </div>
     </div>
   );
 }

@@ -23,45 +23,45 @@
 .fuchsia #mainbody{
   color: rgb(232 121 249);
 }
-.fuchsia #textarea::placeholder{
+/* .fuchsia #textarea::placeholder{
   color: rgb(232 121 249);
-}
+} */
 .fuchsia #textarea::selection{
   background-color: rgb(217 70 239);
 }
 .cyan #mainbody{
   color: rgb(34 211 238);
 }
-.cyan #textarea::placeholder{
+/* .cyan #textarea::placeholder{
   color: rgb(34 211 238);
-}
+} */
 .cyan #textarea::selection{
   background-color: rgb(6 182 212);
 }
 .rose #mainbody{
   color: rgb(251 113 133);
 }
-.rose #textarea::placeholder{
+/* .rose #textarea::placeholder{
   color: rgb(251 113 133);
-}
+} */
 .rose #textarea::selection{
   background-color: rgb(244 63 94);
 }
 .amber #mainbody{
   color: rgb(251 191 36);
 }
-.amber #textarea::placeholder{
+/* .amber #textarea::placeholder{
   color: rgb(251 191 36);
-}
+} */
 .amber #textarea::selection{
   background-color: rgb(245 158 11);
 }
 .green #mainbody{
   color: rgb(74 222 128);
 }
-.green #textarea::placeholder{
+/* .green #textarea::placeholder{
   color: rgb(74 222 128);
-}
+} */
 .green #textarea::selection{
   background-color: rgb(34 197 94);
 }
