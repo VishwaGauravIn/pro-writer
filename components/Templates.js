@@ -87,16 +87,28 @@ Sincerely,
   return (
     <div className="bg-zinc-900 p-2 fixed -mt-12 md:-mt-28 sm:rounded-t-md overflow-x-scroll overflow-y-hidden flex flex-col flex-wrap items-start max-w-[100vw] h-12 md:h-10">
       <div className="w-max h-max flex flex-row flex-wrap space-x-4">
-        <p className="mb-1 cursor-pointer" onClick={() => formalLetter() & onClose()}>
+        <p
+          className="mb-1 cursor-pointer"
+          onClick={() => formalLetter() & onClose()}
+        >
           Formal Letter
         </p>
-        <p className="mb-1 cursor-pointer" onClick={() => informalLetter() & onClose()}>
+        <p
+          className="mb-1 cursor-pointer"
+          onClick={() => informalLetter() & onClose()}
+        >
           Informal Letter
         </p>
-        <p className="mb-1 cursor-pointer" onClick={() => referenceLetter() & onClose()}>
+        <p
+          className="mb-1 cursor-pointer"
+          onClick={() => referenceLetter() & onClose()}
+        >
           Reference Letter
         </p>
-        <p className="mb-1 cursor-pointer" onClick={() => coverLetter() & onClose()}>
+        <p
+          className="mb-1 cursor-pointer"
+          onClick={() => coverLetter() & onClose()}
+        >
           Cover Letter
         </p>
       </div>
