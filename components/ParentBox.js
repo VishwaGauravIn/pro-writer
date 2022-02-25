@@ -5,7 +5,7 @@ export default function ParentBox() {
   const [text, setText] = useState("");
   useEffect(() => {
     if (localStorage.getItem("proWriter-lastSave")) {
-      text = localStorage.getItem("proWriter-lastSave");
+      setText(localStorage.getItem("proWriter-lastSave"));
       onChange();
     }
   }, []);
