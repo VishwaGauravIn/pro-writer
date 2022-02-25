@@ -6,7 +6,6 @@ export default function ParentBox() {
   useEffect(() => {
     if (localStorage.getItem("proWriter-lastSave")) {
       setText(localStorage.getItem("proWriter-lastSave"));
-      onChange();
     }
   }, []);
   const [letterCount, setLetterCount] = useState(0);
