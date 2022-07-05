@@ -3,10 +3,10 @@ import React from "react";
 export default function Templates({ onClose, setText }) {
   function formalLetter() {
     setText(`
-[Date]
-
 From: [Sender Name]
 [Title] | [Company] | [Address] | [City] | [State] | [Zip]
+
+[Date]
 
 To: [Recipient Name]
 [Title] | [Company] | [Address] | [City] | [State] | [Zip]
