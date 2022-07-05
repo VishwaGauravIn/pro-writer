@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Broadcast from "../components/Broadcast";
 import Header from "../components/Header";
 import ParentBox from "../components/ParentBox";
 
@@ -60,6 +61,7 @@ export default function Home() {
         id="mainbody"
         className="bg-zinc-900 text-fuchsia-400 m-2 md:p-2 mon font-semibold md:overflow-y-hidden"
       >
+        <Broadcast/>
         <Header />
         <ParentBox />
       </body>
