@@ -1,9 +1,19 @@
 import Head from "next/head";
+import { useState } from "react";
 import Broadcast from "../components/Broadcast";
 import Header from "../components/Header";
 import ParentBox from "../components/ParentBox";
 
 export default function Home() {
+  const [theme, settheme] = useState("dark");
+  const setTheme = () => {
+    if (theme == "dark") {
+      settheme("light");
+    } else {
+      settheme("dark");
+    }
+  };
+
   return (
     <>
       <Head>
@@ -59,10 +69,14 @@ export default function Home() {
 
       <body
         id="mainbody"
-        className="bg-zinc-900 text-fuchsia-400 m-2 md:p-2 mon font-semibold md:overflow-y-hidden"
+        className={
+          theme == "dark"
+            ? "bg-zinc-900 text-fuchsia-400 p-6  md:p-2 mon font-semibold md:overflow-y-hidden"
+            : "bg-zinc-100 text-fuchsia-400 p-6  md:p-2 mon font-semibold md:overflow-y-hidden"
+        }
       >
-        <Broadcast/>
-        <Header />
+        <Broadcast />
+        <Header theme setTheme={setTheme} />
         <ParentBox />
       </body>
     </>

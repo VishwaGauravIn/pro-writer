@@ -1,53 +1,64 @@
 import React, { useEffect } from "react";
 
-export default function Header() {
-  useEffect(()=>{
-      if(localStorage.getItem('favTheme') === 'fuchsia'){fuchsia()}
-      if(localStorage.getItem('favTheme') === 'cyan'){cyan()}
-      if(localStorage.getItem('favTheme') === 'rose'){rose()}
-      if(localStorage.getItem('favTheme') === 'amber'){amber()}
-      if(localStorage.getItem('favTheme') === 'green'){green()}
-  },[])
-    function fuchsia(){
-        document.documentElement.classList.add('fuchsia')
-        document.documentElement.classList.remove('cyan')
-        document.documentElement.classList.remove('rose')
-        document.documentElement.classList.remove('amber')
-        document.documentElement.classList.remove('green')
-        localStorage.setItem('favTheme', 'fuchsia')
+import { HiOutlineMoon, HiMoon } from "react-icons/hi";
+export default function Header({ setTheme, theme }) {
+  useEffect(() => {
+    if (localStorage.getItem("favTheme") === "fuchsia") {
+      fuchsia();
     }
-    function cyan(){
-        document.documentElement.classList.add('cyan')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('rose')
-        document.documentElement.classList.remove('amber')
-        document.documentElement.classList.remove('green')
-        localStorage.setItem('favTheme', 'cyan')
+    if (localStorage.getItem("favTheme") === "cyan") {
+      cyan();
     }
-    function rose(){
-        document.documentElement.classList.add('rose')
-        document.documentElement.classList.remove('cyan')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('amber')
-        document.documentElement.classList.remove('green')
-        localStorage.setItem('favTheme', 'rose')
+    if (localStorage.getItem("favTheme") === "rose") {
+      rose();
     }
-    function amber(){
-        document.documentElement.classList.add('amber')
-        document.documentElement.classList.remove('cyan')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('green')
-        localStorage.setItem('favTheme', 'amber')
+    if (localStorage.getItem("favTheme") === "amber") {
+      amber();
     }
-    function green(){
-        document.documentElement.classList.add('green')
-        document.documentElement.classList.remove('cyan')
-        document.documentElement.classList.remove('fuchsia')
-        document.documentElement.classList.remove('amber')
-        document.documentElement.classList.remove('fuchsia')
-        localStorage.setItem('favTheme', 'green')
+    if (localStorage.getItem("favTheme") === "green") {
+      green();
     }
+  }, []);
+  function fuchsia() {
+    document.documentElement.classList.add("fuchsia");
+    document.documentElement.classList.remove("cyan");
+    document.documentElement.classList.remove("rose");
+    document.documentElement.classList.remove("amber");
+    document.documentElement.classList.remove("green");
+    localStorage.setItem("favTheme", "fuchsia");
+  }
+  function cyan() {
+    document.documentElement.classList.add("cyan");
+    document.documentElement.classList.remove("fuchsia");
+    document.documentElement.classList.remove("rose");
+    document.documentElement.classList.remove("amber");
+    document.documentElement.classList.remove("green");
+    localStorage.setItem("favTheme", "cyan");
+  }
+  function rose() {
+    document.documentElement.classList.add("rose");
+    document.documentElement.classList.remove("cyan");
+    document.documentElement.classList.remove("fuchsia");
+    document.documentElement.classList.remove("amber");
+    document.documentElement.classList.remove("green");
+    localStorage.setItem("favTheme", "rose");
+  }
+  function amber() {
+    document.documentElement.classList.add("amber");
+    document.documentElement.classList.remove("cyan");
+    document.documentElement.classList.remove("fuchsia");
+    document.documentElement.classList.remove("fuchsia");
+    document.documentElement.classList.remove("green");
+    localStorage.setItem("favTheme", "amber");
+  }
+  function green() {
+    document.documentElement.classList.add("green");
+    document.documentElement.classList.remove("cyan");
+    document.documentElement.classList.remove("fuchsia");
+    document.documentElement.classList.remove("amber");
+    document.documentElement.classList.remove("fuchsia");
+    localStorage.setItem("favTheme", "green");
+  }
   return (
     <div>
       <div className="flex flex-row">
@@ -68,12 +79,34 @@ export default function Header() {
           </svg>
           Pro Writer
         </p>
-        <div className="absolute right-4 flex flex-row pt-2 md:pt-0">
-          <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-fuchsia-400" onClick={fuchsia}></div>
-          <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-cyan-400" onClick={cyan}></div>
-          <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-rose-400" onClick={rose}></div>
-          <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-amber-400" onClick={amber}></div>
-          <div className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-green-400" onClick={green}></div>
+        <div className="absolute right-4 flex flex-row items-center pt-2 md:pt-0">
+          <button onClick={setTheme}>
+            {theme == "dark" ? (
+              <HiMoon size="2.2em" />
+            ) : (
+              <HiOutlineMoon size="2.2em" />
+            )}
+          </button>
+          <div
+            className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-fuchsia-400"
+            onClick={fuchsia}
+          ></div>
+          <div
+            className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-cyan-400"
+            onClick={cyan}
+          ></div>
+          <div
+            className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-rose-400"
+            onClick={rose}
+          ></div>
+          <div
+            className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-amber-400"
+            onClick={amber}
+          ></div>
+          <div
+            className="w-4 h-4 m-1 rounded-full cursor-pointer active:scale-90  bg-green-400"
+            onClick={green}
+          ></div>
         </div>
       </div>
     </div>
