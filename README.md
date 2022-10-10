@@ -39,7 +39,7 @@ This project is Open Source so if you want any new feature, you can add this you
    ![image](https://user-images.githubusercontent.com/81325730/194935265-68197cd0-3908-4006-9e5b-79c2f6c63fae.png)
    
 # PageSpeed Insights
-<img src="https://raw.githubusercontent.com/VishwaGauravIn/Images/900d7c8ebd920e9151a578fa859a392c926905d3/pw_psi.svg">
+<img src="https://raw.githubusercontent.com/VishwaGauravIn/Images/900d7c8ebd920e9151a578fa859a392c926905d3/pw_psi.svg" align="center">
 
 # Tech Used
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
