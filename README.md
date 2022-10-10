@@ -31,11 +31,12 @@ This project is Open Source so if you want any new feature, you can add this you
 ### Website is Live : [prowriter.itsvg.in](https://prowriter.itsvg.in)
 
 # Screensorts
-   <img src="https://github.com/VishwaGauravIn/Images/blob/main/6.png?raw=true">
-   <img src="https://github.com/VishwaGauravIn/Images/blob/main/4.png?raw=true">
-   <img src="https://github.com/VishwaGauravIn/Images/blob/main/3.png?raw=true">
-   <img src="https://github.com/VishwaGauravIn/Images/blob/main/2.png?raw=true">
-   <img src="https://github.com/VishwaGauravIn/Images/blob/main/1.png?raw=true">
+   ![image](https://user-images.githubusercontent.com/81325730/194935068-342d6081-9f52-4059-947a-7c8bc6ed1e4c.png)
+   ![image](https://user-images.githubusercontent.com/81325730/194935154-c399c7cd-5d05-47b8-b2c1-c354533b4484.png)
+   ![image](https://user-images.githubusercontent.com/81325730/194935192-db4fc121-ca74-4631-992b-50abd86c0a4f.png)
+   ![image](https://user-images.githubusercontent.com/81325730/194935221-7c8d3d09-1b13-4dbb-ab61-c0cbe3da84b5.png)
+   ![image](https://user-images.githubusercontent.com/81325730/194935133-a262dcb5-cf00-4dfd-8d6f-46d01505119e.png)
+   ![image](https://user-images.githubusercontent.com/81325730/194935265-68197cd0-3908-4006-9e5b-79c2f6c63fae.png)
    
 # PageSpeed Insights
 <img src="https://raw.githubusercontent.com/VishwaGauravIn/Images/900d7c8ebd920e9151a578fa859a392c926905d3/pw_psi.svg">
