@@ -33,8 +33,8 @@ This project is Open Source so if you want any new feature, you can add this you
     setLetterCount(text.length);
     localStorage.setItem("proWriter-lastSave", text);
     if (text.length > 0 && text != " ") {
-      setWordCount(text.match(/(\w+)/g).length);
-      setLineCount(text.split(/\r\n|\r|\n/).length);
+      setWordCount(text.match(/(\w+)/g)?.length || 0);
+      setLineCount(text.split(/\r\n|\r|\n/)?.length || 0);
 
       setMemory(Math.round((text.length * 0.001 + Number.EPSILON) * 100) / 100);
     } else {
