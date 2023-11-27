@@ -15,22 +15,19 @@ Welcome to Pro Writer 🚀
 
 First of all, Thanks for using Pro Writer 💛
 
-You can see letter count, word count, line count, and text memory size in Statistics section.
-You can also set text size according to your requirement and  of your choice.
+You can see letter count, word count, line count, and text memory size in the Statistics section. You can also set text size according to your requirements and of your choice.
 
 What is Magic Spell? [BETA]
-Need 1000 words article and stuck on 960? use Magic Spell and it will add relevant characters to your article to make it even more longer.
-Not just article, try this with anything. Story, Letter, Cover, and more.
+Need a 1000 words article and stuck on 960? Use Magic Spell and it will add relevant characters to your article to make it even longer. Not just an article, try this with anything. Story, Letter, Cover, and more.
 
-Wrote something important but forgot to save? Don't worry, we got your back. Your text is saved automatically in your device.
+Wrote something important but forgot to save it? Don't worry, we got your back. Your text is saved automatically on your device.
 
-It works on all devices, Sounds good? Well there is lot more to come. 
-This project is Open Source so if you want any new feature, you can add this yourself by contributing to our GitHub repository or request a feature
+It works on all devices, Sounds good? Well, there is a lot more to come. This project is Open Source so if you want any new features, you can add them yourself by contributing to our GitHub repository or requesting a feature.
 
 
 ### Website is Live : [prowriter.itsvg.in](https://prowriter.itsvg.in)
 
-# Screensorts
+# Screenshots
    ![image](https://user-images.githubusercontent.com/81325730/194935068-342d6081-9f52-4059-947a-7c8bc6ed1e4c.png)
    ![image](https://user-images.githubusercontent.com/81325730/194935154-c399c7cd-5d05-47b8-b2c1-c354533b4484.png)
    ![image](https://user-images.githubusercontent.com/81325730/194935192-db4fc121-ca74-4631-992b-50abd86c0a4f.png)
@@ -50,13 +47,13 @@ This project is Open Source so if you want any new feature, you can add this you
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
    
 ## Trying to run this locally? Follow this
-**If you are Using NPM then:**
-- **Step 1:** Fork and Download the Repository
-- **Step 2:** Open it in editor like VSCode
-- **Step 3:** Open Terminal inside it and run ``` npm install``` to install required dependencies (you can apply '--force' after command and then run it , incase you face any error)
+**If you are using NPM then:**
+- **Step 1:** Fork and Download the Repository.
+- **Step 2:** Open it in an editor like VSCode.
+- **Step 3:** Open Terminal inside it and run ``` npm install``` to install required dependencies (you can apply '--force' after the command and then run it, in case you face any error).
 - **Step 4:** Run ```npm run dev``` to launch the website on 'localhost:3000' and check if it is working without any error.
-- **Step 5:** Do your Changes and make sure that you don't get any error or warning.
-- **Step 6:** Push on github and Create a Pull Request 
+- **Step 5:** Do your Changes and make sure that you don't get any errors or warnings.
+- **Step 6:** Push on GitHub and Create a Pull Request.
 
 **Stuck? Search your issue/error on Google** 
 
